@@ -3,7 +3,7 @@ const eventDates = [];
 
 document.addEventListener('DOMContentLoaded', function() {
 	// Define the start date of the event
-	const startDate = new Date('2023-05-09');
+	const startDate = new Date('2023-05-08');
 
 	// Define the duration of each segment in milliseconds
 	const dayShiftDuration = 1 * 24 * 60 * 60 * 1000; // 2 days
