@@ -30,8 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
         startDate = new Date(DatesByGroups[cookie]);
 
         //make html default radio check
-        const element = document.querySelector(`input[value="${cookie}"]`);
-        element.checked = true;
+        document.querySelector(`input[value="${cookie}"]`).checked = true;
+    } else {
+        // Define the start date of the event
+        startDate = new Date(DatesByGroups[1]);
+
+        //make html default radio check
+        document.querySelector(`input[value="1"]`).checked = true;
     }
 
 	// Define the duration of each segment in milliseconds
