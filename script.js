@@ -73,8 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
         center: 'title',
         right: 'multiMonthYear,dayGridMonth,timeGridWeek'
       },
-      initialView: 'multiMonthYear',
-      initialDate: '2023-01-12',
+      initialView: 'dayGridMonth',
+      // initialDate: '2023-01-12',
+      initialDate: new Date(),
       editable: true,
       selectable: true,
       dayMaxEvents: true, // allow "more" link when too many events
@@ -82,7 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // showNonCurrentDates: true,
       // fixedWeekCount: false,
       // businessHours: true,
-    //   weekends: false,
+      // weekends: false,
+      responsive: true,
       events: eventDates
 	//   [
         // {
