@@ -1,5 +1,47 @@
 // Define an array to store the event dates
 const eventDates = [];
+const publicHolidayColor = "#82002e";
+
+const publicHoliday = [
+  {
+    title: 'အာဇာနည်နေ့',
+    start: '2023-07-19',
+    color: publicHolidayColor
+  },
+  {
+    title: 'ဓမ္မစကြာနေ့',
+    start: '2023-08-01',
+    color: publicHolidayColor
+  },
+  {
+    title: 'သီတင်းကျွတ် မီးထွန်းပွဲ',
+    start: '2023-10-28',
+    end: '2023-10-31',
+    color: publicHolidayColor
+  },
+  {
+    title: 'တန်ဆောင်တိုင်',
+    start: '2023-11-26',
+    end: '2023-11-28',
+    color: publicHolidayColor
+  },
+  {
+    title: 'အမျိုးသားနေ့',
+    start: '2023-12-07',
+    color: publicHolidayColor
+  },
+  {
+    title: 'Christmas',
+    start: '2023-12-25',
+    color: publicHolidayColor
+  },
+  {
+    title: 'New Year',
+    start: '2023-12-31',
+    end: '2024-01-02',
+    color: publicHolidayColor
+  },
+]
 
 document.addEventListener('DOMContentLoaded', function() {
 	// Define the start date of the event
@@ -35,25 +77,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	  // Add the segment dates to the eventDates array
 	  eventDates.push({
-		title: 'dayShift',
+		title: 'DayShift',
 		start: dayShiftStart,
 		end: dayShiftEnd,
 		color: colors[0],
 	  });
 	  eventDates.push({
-		title: 'dRest',
+		title: 'OFF',
 		start: dayRestStart,
 		end: dayRestEnd,
 		color: colors[1],
 	  });
 	  eventDates.push({
-		title: 'nightShift',
+		title: 'NightShift',
 		start: nightShiftStart,
 		end: nightShiftEnd,
 		color: colors[2],
 	  });
 	  eventDates.push({
-		title: 'nRest',
+		title: 'OFF',
 		start: nightRestStart,
 		end: nightRestEnd,
 		color: colors[1],
@@ -85,16 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
       // businessHours: true,
       // weekends: false,
       responsive: true,
-      events: eventDates
-	//   [
+      events:
+      [
+        ...eventDates,
+        ...publicHoliday,
         // {
-        //   title: 'All Day Event',
-        //   start: '2023-01-01'
+        //   title: 'အာဇာနည်နေ့',
+        //   start: '2023-07-19',
+        //   color: publicHolidayColor
         // },
         // {
         //   title: 'Long Event',
-        //   start: '2023-01-07',
-        //   end: '2023-01-10'
+        //   start: '2023-05-07',
+        //   end: '2023-05-11',
+        //   color: publicHolidayColor
         // },
         // {
         //   groupId: 999,
@@ -141,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //   url: 'http://google.com/',
         //   start: '2023-01-28'
         // }
-    //   ]
+      ]
     });
 
     calendar.render();
